@@ -10,7 +10,12 @@ import lombok.experimental.UtilityClass;
 @UtilityClass
 public class DiscountDetailsAdapter {
 
-    public DiscountDetails toDetails(DiscountEntity) {
+    public DiscountDetails toDetails(DiscountEntity discountEntity) {
+        // TODO: discount details conversion logic
+        return null;
+    }
+
+    public DiscountEntity toEntity(DiscountDetails discountDetails) {
         // TODO: discount details conversion logic
         return null;
     }

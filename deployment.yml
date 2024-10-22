@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: discount-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: discount-service
+  template:
+    metadata:
+      labels:
+        app: discount-service
+    spec:
+      containers:
+        - name: discount-service
+          image: myrepo/discount-service:latest
+          ports:
+            - containerPort: 3297
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "prod"
